@@ -1,0 +1,9 @@
+var showtime = function () {
+    var nowtime = new Date(),  
+        endtime = new Date("2020/8/8");  //changable
+    var lefttime = endtime.getTime() - nowtime.getTime(),  
+        leftd = Math.floor(lefttime/(1000*60*60*24)),  
+        lefth = Math.floor(lefttime/(1000*60*60)%24),  
+        leftm = Math.floor(lefttime/(1000*60)%60),  
+        lefts = Math.floor(lefttime/1000%60); 
+    print (leftd + "day" + lefth + ":" + leftm + ":" + lefts); 
